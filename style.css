@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    background: rgb(51, 50, 50);
+}
+
+body{
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+}
+#board{
+    display:grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3,100px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    
+  
+}
+
+ #board > button{
+     background: white;
+     font-size: 20px;
+ }
+
+ #board > button:hover{
+    background: rgb(214, 208, 208);
+}
+
+.x::after{
+    content: 'x';
+    font-size: 30px;
+}
+
+.o::after{
+    content: 'x';
+    font-size: 30px;
+}
