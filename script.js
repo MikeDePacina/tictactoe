@@ -1,4 +1,5 @@
 const tiles = document.getElementsByTagName('button')
+const resetButton = document.getElementById('reset')
 console.log(tiles)
 
 class tictactoe{
@@ -10,13 +11,18 @@ class tictactoe{
 
     }    
 
+    reset(){
+        tiles.forEach(button =>{
+            button.classList.toggle("x")
+        })
+    }
    
-    updateClass(e){
+    updateClass(){
         let counter = 0
         if(counter % 2 == 0)
-            tiles.classList.add = "x"
+            button.classList.add = "x"
         else 
-            tiles.classList.add = "o"
+            button.classList.add = "o"
         counter++
 
     }
@@ -25,8 +31,13 @@ class tictactoe{
 const game = new tictactoe()
 
 
-forEach(button =>{
+tiles.forEach(button =>{
     button.addEventListener('click', ()=>{
         game.updateClass()
     })
+})
+
+resetButton.addEventListener('click',()=>{
+    game.reset()
+
 })
