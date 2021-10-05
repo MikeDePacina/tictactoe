@@ -80,8 +80,12 @@ const tileClicked = (e)=>{
             board[index] = currentPlayer
             e.target.innerText = currentPlayer
 
-            if(checkWin() == true)
+            if(checkWin() == true){
                 resultText.innerText = `${currentPlayer} won`
+                tiles.forEach(button =>{
+                    button.setAttribute('disabled', true)
+                })
+            }
 
             if(checkDraw() == true)
             resultText.innerText = 'Draw'
@@ -115,6 +119,9 @@ resetButton.addEventListener('click', ()=>{
     
     
     resultText.innerHTML = ''
+    tiles.forEach(button =>{
+        button.removeAttribute('disabled')
+    })
 })
 
 
