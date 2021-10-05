@@ -24,26 +24,19 @@ body{
 
  #board > button{
      background: white;
-     font-size: 20px;
+     font-size: 45px;
  }
 
  #board > button:hover{
     background: rgb(214, 208, 208);
 }
 
-.x::after{
-    content: 'x';
-    font-size: 30px;
-}
 
-.o::after{
-    content: 'x';
-    font-size: 30px;
-}
 
 .footer button{
     background: rgb(224, 219, 219);
     font-size: 32px;
+    
 }
 
 .title{
@@ -53,6 +46,7 @@ body{
 
 .header{
     display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 40px 0px;
@@ -61,6 +55,12 @@ body{
 .footer{
     display:flex;
     justify-content: center;
-    align-items: center;
+    align-content: flex-end;
     margin: 50px 0px 10px 0px;
+}
+
+.results{
+    margin: 1em 0em 0em;
+    font-size: 35px;
+    color: aliceblue;
 }
